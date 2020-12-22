@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "ueber_uns",
+  "info": {
+    "name": "UeberUns"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "ContentBlocks": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.block-text-image"
+      ]
+    }
+  }
+}

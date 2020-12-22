@@ -1,0 +1,73 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aktivitaets",
+  "info": {
+    "name": "Aktivität",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string",
+      "required": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titel",
+      "required": true
+    },
+    "kompetenzfelds": {
+      "collection": "kompetenzfeld",
+      "via": "aktivitats",
+      "dominant": true
+    },
+    "saules": {
+      "collection": "saeule",
+      "via": "aktivitats",
+      "dominant": true
+    },
+    "Kurzbeschreibung": {
+      "type": "text"
+    },
+    "aktivitatskategories": {
+      "collection": "aktivitaetskategorie",
+      "via": "aktivitats",
+      "dominant": true
+    },
+    "FeaturedImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Aktivitaetslink": {
+      "type": "string"
+    },
+    "Datum": {
+      "type": "date"
+    },
+    "AktivitaetslinkButtonText": {
+      "type": "string"
+    },
+    "people": {
+      "collection": "person",
+      "via": "aktivitats"
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "ContentBlocks": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.block-text-image"
+      ]
+    }
+  }
+}

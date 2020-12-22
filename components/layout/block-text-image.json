@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_layout_block_text_images",
+  "info": {
+    "name": "BlockTextImage",
+    "icon": "credit-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Content": {
+      "type": "richtext"
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "BildLinks": {
+      "type": "boolean",
+      "default": true
+    },
+    "Heading": {
+      "type": "string"
+    }
+  }
+}

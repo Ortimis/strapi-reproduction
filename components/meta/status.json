@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_meta_statuses",
+  "info": {
+    "name": "Status",
+    "icon": "chair"
+  },
+  "options": {},
+  "attributes": {
+    "Team": {
+      "type": "boolean"
+    },
+    "Projektmitarbeitende": {
+      "type": "boolean"
+    },
+    "Netzwerk": {
+      "type": "boolean"
+    },
+    "Autor": {
+      "type": "boolean"
+    }
+  }
+}

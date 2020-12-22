@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "saeules",
+  "info": {
+    "name": "Säule",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titel"
+    },
+    "aktivitats": {
+      "via": "saules",
+      "collection": "aktivitaet"
+    },
+    "Content": {
+      "type": "dynamiczone",
+      "components": [
+        "layout.block-text-image"
+      ]
+    },
+    "Kurzbeschreibung": {
+      "type": "text"
+    }
+  }
+}

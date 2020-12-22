@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "persons",
+  "info": {
+    "name": "Person",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Nachname": {
+      "type": "string",
+      "required": true
+    },
+    "Vorname": {
+      "type": "string"
+    },
+    "eMail": {
+      "type": "email"
+    },
+    "LinkedIn": {
+      "type": "string"
+    },
+    "Profilbild": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "Rolle": {
+      "type": "string"
+    },
+    "Kurzvita": {
+      "type": "richtext"
+    },
+    "AkademischeTitel": {
+      "type": "string"
+    },
+    "aktivitats": {
+      "via": "people",
+      "collection": "aktivitaet",
+      "dominant": true
+    },
+    "Teamvita": {
+      "type": "richtext"
+    },
+    "Xing": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "component",
+      "repeatable": false,
+      "component": "meta.status"
+    }
+  }
+}

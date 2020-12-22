@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/kompetenzfelds",
+      "handler": "kompetenzfeld.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kompetenzfelds/count",
+      "handler": "kompetenzfeld.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/kompetenzfelds/:id",
+      "handler": "kompetenzfeld.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/kompetenzfelds",
+      "handler": "kompetenzfeld.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/kompetenzfelds/:id",
+      "handler": "kompetenzfeld.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/kompetenzfelds/:id",
+      "handler": "kompetenzfeld.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

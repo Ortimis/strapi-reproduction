@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "aktivitaetskategories",
+  "info": {
+    "name": "Aktivitätskategorie"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Titel": {
+      "type": "string"
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Titel"
+    },
+    "aktivitats": {
+      "via": "aktivitatskategories",
+      "collection": "aktivitaet"
+    },
+    "FeaturedImage": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

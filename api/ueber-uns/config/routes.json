@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/ueber-uns",
+      "handler": "ueber-uns.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/ueber-uns",
+      "handler": "ueber-uns.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/ueber-uns",
+      "handler": "ueber-uns.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
